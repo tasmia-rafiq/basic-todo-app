@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+html {
+    height: 100%;
+}
+
+body{
+    background-image: linear-gradient(to right bottom, #17181f, #1a1a31, #221941, #31154e, #450657);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: #ddd;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+*{
+    box-sizing: border-box;
+}
+main{
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.wrapper {
+    margin-top: 30px;
+    padding: 25px;
+    background: rgba(0,0,0, 0.2);
+    border-radius: 10px;
+    backdrop-filter: blur(60px);
+    box-shadow: 0 5px 20px rgba(0,0,0, 0.15);
+}
+
+form{
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    padding: 15px;
+    display:flex;
+    margin-bottom: 20px;
+}
+form input[type="text"] {
+    background: none;
+    color:#fff;
+    border:0;
+    padding: 0 8px;
+    font-size: 16px;
+    display:block;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+}
+
+form button{
+    background-color: #61DAFB;
+    border:0;
+    border-radius: 6px;
+    padding: 0 10px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    cursor:pointer;
+}
+
+.head_title {
+    font-weight: 500;
+    text-align: left;
+}
+
+div.task{
+    background-color: rgba(0,0,0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 5px;
+    display:flex;
+    align-items: center;
+    transition: opacity .3s linear;
+    cursor: default;
+}
+div.task svg{
+    height: 20px;
+    margin-right: 16px;
+    fill: #61DAFB;
+    cursor: pointer;
+}
+div.task.done{
+    opacity: 0.5;
+}
+div.task-name, div.task form{
+    flex-grow:1;
+}
+div.task span{
+    position:relative;
+}
+div.task span:before{
+    content:'';
+    display:block;
+    width:0;
+    height:1px;
+    background-color: #ddd;
+    position:absolute;
+    top: 10px;
+    transition: width .1s linear;
+}
+div.task.done span:before{
+    width: 100%;
+}
+
+h1, h2{
+    text-align: center;
+    font-weight: 500;
+    margin: 0;
+    font-size: 30px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+div.checkbox{
+    display:flex;
+    align-items: center;
+}
+
+button.trash{
+    background:none;
+    border:none;
+    display:flex;
+    cursor:pointer;
+}
+button.trash svg{
+    fill: #888;
+    height: 14px;
+}
+div.task input{
+    border: 2px solid #555;
+    border-radius:5px;
+    padding: 2px 4px;
+}
